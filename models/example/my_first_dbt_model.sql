@@ -24,4 +24,4 @@
         cast(jsonb_extract_path_text(_airbyte_data, 'store') as varchar) as store,
         cast(jsonb_extract_path_text(_airbyte_data, 'admin_name') as varchar) as admin_name
         -- cast(jsonb_extract_path_text(_airbyte_data, 'service') as varchar) as service_,
-    from "postgres".public._airbyte_raw_sheet1;
+    from _airbyte_raw_sheet1
