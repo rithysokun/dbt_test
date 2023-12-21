@@ -13,7 +13,7 @@
 -- SQL model to build a hash column based on the values of this record
 -- depends_on: __dbt__cte__sheet1_ab2
 
-create table "postgres".public."sheet1__dbt_tmp"
+create table "postgres"."public"."sheet1__dbt_tmp"
   as (
     select _airbyte_emitted_at,
         (current_timestamp at time zone 'utc')::timestamp as _airbyte_normalized_at,
