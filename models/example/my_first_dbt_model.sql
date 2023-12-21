@@ -15,8 +15,7 @@
 
 create table "postgres".public."sheet1__dbt_tmp"
   as (
-    select
-        _airbyte_emitted_at,
+    select _airbyte_emitted_at,
         (current_timestamp at time zone 'utc')::timestamp as _airbyte_normalized_at,
         cast(jsonb_extract_path_text(_airbyte_data, 'city') as varchar) as city,
         cast(jsonb_extract_path_text(_airbyte_data, 'commune') as varchar) as commune,
