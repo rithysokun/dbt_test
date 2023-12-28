@@ -13,10 +13,20 @@ profile: 'dbt_test'
 # The `model-paths` config, for example, states that models in this project can be
 # found in the "models/" directory. You probably won't need to change these!
 model-paths: ["models"]
+
+# Path to 'aggregate sql files', these file will be compiled but not executed . 
 analysis-paths: ["analyses"]
+
+# path to validation files
 test-paths: ["tests"]
+
+# Path to csv file . Seed can be referenced downstream model the same way as model using ref()
 seed-paths: ["seeds"]
+
+# Path to Macro in Jinja . AKA "Function" in programming language 
 macro-paths: ["macros"]
+
+#path to snapshot (point-in-time copy of current data state)
 snapshot-paths: ["snapshots"]
 
 clean-targets:         # directories to be removed by `dbt clean`
